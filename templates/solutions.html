@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Solutions</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/solutions.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1>🌎 Sustainable Solutions</h1>
+  </header>
+
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    <a href="{{ url_for('stats') }}">Statistics</a>
+    <a href="{{ url_for('solutions') }}" class="active">Solutions</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </nav>
+
+  <section class="solutions-section">
+    <h2>Your Sustainability Report</h2>
+    <p>Total Emission: <strong>{{ total_emission }} kg CO₂/day</strong></p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Your Emission (kg)</th>
+            <th>Limit (kg)</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in comparison %}
+          <tr class="{% if 'Exceeds' in row.status %}high{% else %}ok{% endif %}">
+            <td>{{ row.category }}</td>
+            <td>{{ row.emission }}</td>
+            <td>{{ row.limit }}</td>
+            <td>{{ row.status }}</td>
+            <td>
+              {{ row.reduction_msg }}
+              <br>
+              <em>{{ row.suggestion }}</em>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <a href="{{ url_for('dashboard') }}" class="back-btn">⬅ Back to Dashboard</a>
+  </section>
+
+  <footer>
+    © 2025 Carbon Footprint Tracker | Together for a Greener Future 🌱
+  </footer>
+
+</body>
+</html>
