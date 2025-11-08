@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Activity - Carbon Footprint Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/add.css') }}">
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      alert("{{ messages[0] }}");
+    </script>
+  {% endif %}
+{% endwith %}
+  <header>
+    <h1>🌱 Add Your Activity</h1>
+  </header>
+
+
+  <section class="form-section">
+    <h2>Record a New Activity</h2>
+    <p>Fill out the details below to track your carbon footprint.</p>
+
+   <form action="{{ url_for('add_user_activity') }}" method="POST">
+  
+  <label for="activity_id">Select Activity:</label>
+  <select id="activity_id" name="activity_id" required>
+    <option value="">-- Select Activity --</option>
+    {% for activity in activities %}
+      <option value="{{ activity[0] }}">
+        {{ activity[1] }} ({{ activity[2] }})
+      </option>
+    {% endfor %}
+  </select>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" step="any" placeholder="Enter quantity (e.g., km, kg, kWh)" required>
+
+  <label for="notes">Notes (optional):</label>
+  <input type="text" id="notes" name="notes" placeholder="Any comments">
+
+  <button type="submit">Add Activity</button>
+</form>
+
+
+    <a href="{{ url_for('dashboard') }}" class="back-btn">⬅ Back to Dashboard</a>
+  </section>
+
+  <footer>
+    © 2025 Carbon Footprint Tracker | Record. Analyze. Improve.
+  </footer>
+
+</body>
+</html>

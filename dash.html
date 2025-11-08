@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Carbon Footprint Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css') }}">
+</head>
+
+<body>
+
+  <header>
+    <h1>🌍 Carbon Footprint Dashboard</h1>
+  </header>
+
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('dashboard') }}" class="active">Dashboard</a>
+    <a href="{{ url_for('stats') }}">Statistics</a>
+    <a href="{{ url_for('solutions') }}">Solutions</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </nav>
+  {% if session.get('user_name') %}
+  <h2 style="text-align: center;">Welcome, {{ session['user_name'] }} </h2>
+  {% endif %}
+  <section class="dashboard">
+    <h2>Your Environmental Impact</h2>
+    <p class="intro">Track, analyze, and reduce your daily carbon emissions.</p>
+
+    <!-- Single Add Activity Button -->
+    <a href="{{ url_for('add') }}" class="add-activity-btn">➕ Add Activity</a>
+    <div class="cards-container">
+      <div class="card">
+  <h3> Waste</h3>
+  <p>Today: <strong>{{ "%.2f" | format(daily_total) }} kg CO₂</strong></p>
+</div>
+
+<div class="card">
+  <h3>🚗 Travel Emissions</h3>
+  <p>This week: <strong>{{ "%.2f" | format(transport_total) }} kg CO₂</strong></p>
+</div>
+
+<div class="card">
+  <h3>💡 Energy Usage</h3>
+  <p>This month: <strong>{{ "%.2f" | format(energy_total) }} kg CO₂</strong></p>
+</div>
+
+<div class="card">
+  <h3>🍴 Food Impact</h3>
+  <p>This week: <strong>{{ "%.2f" | format(food_total) }} kg CO₂</strong></p>
+</div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Carbon Footprint Tracker | Towards a Greener Tomorrow
+  </footer>
+  <a href="{{ url_for('logout') }}">Logout</a>
+
+</body>
+
+</html>
