@@ -1,3 +1,5 @@
+
+=======
 import psycopg2
 
 def get_db_connection():
@@ -8,3 +10,4 @@ def get_db_connection():
         password="Navya@123"  # 🔹 replace with your actual password
     )
     return conn
+

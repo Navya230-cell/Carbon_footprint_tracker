@@ -1,0 +1,98 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navigation */
+nav {
+  background-color: #388e3c;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0.6rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c8e6c9;
+}
+
+
+
+/* Stats Section */
+.stats-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stats-section h2 {
+  color: #2e7d32;
+  margin-bottom: 0.3rem;
+  font-size: 1.8rem;
+}
+
+.stats-section .intro {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Chart Styling */
+.chart-container {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto 2rem auto;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #43a047;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1b5e20;
+  color: white;
+  padding: 12px;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}

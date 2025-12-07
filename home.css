@@ -1,0 +1,90 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #388e3c;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0.75rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c8e6c9;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #43a047;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1b5e20;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}

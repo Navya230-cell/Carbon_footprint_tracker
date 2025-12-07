@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navigation */
+nav {
+  background-color: #388e3c;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0.6rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c8e6c9;
+  text-decoration: none;
+}
+
+
+/* Login Section */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-image: linear-gradient(to right, #e8f5e9, #f1f8e9);
+}
+
+.login-box {
+  background-color: white;
+  padding: 30px 35px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 300px; /* smaller width */
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.login-box p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #43a047;
+}
+
+button {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+/* Register link */
+.register-link {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.register-link a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1b5e20;
+  color: white;
+  padding: 12px;
+  font-size: 0.85rem;
+}
